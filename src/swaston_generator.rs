@@ -58,7 +58,7 @@ pub fn generate_swaston(s: &str) -> String {
         if c == size - 1 {  // case last row
             lower.push_str(&format!("{0}{1}{2}\n", r_spaced_word, tab_pre, r_vec[c]));
         } else {
-            lower.push_str(&format!("{0}{1}{2}{3}{4}\n", tab_pre, ' ', l_vec[c], tab_pre, r_vec[c]));
+            lower.push_str(&format!("{0}{1}{2}{3}\n", tab_post, l_vec[c], tab_pre, r_vec[c]));
         }
     }
     return format!("{0}{1}{2}", upper, center, lower);
